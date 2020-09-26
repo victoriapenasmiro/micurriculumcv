@@ -5,7 +5,7 @@
     */
     (function ($) {
     "use strict"; // Start of use strict
-
+    $(".fa-times").hide();//new empieza oculto
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
@@ -34,7 +34,13 @@
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
         $(".navbar-brand span").last().addClass("d-none");
+        $(".navbar-toggler-icon").show();//new
+        $(".fa-times").hide();//new
     });
+
+    /*
+    “wrapInner()”, este comando se encarga de envolver el contenido, para incluirlo como nodos de texto.
+    */
 
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
@@ -45,8 +51,11 @@
         if($("#profile").hasClass("d-none")){
             $(".navbar-brand span").removeClass("d-none");
             $(".img-fluid").width("50%");
+            $(".navbar-toggler-icon").hide();//new
+            $(".fa-times").show();//new
         }else{
             $(".navbar-brand span").last().addClass("d-none");
+            $(".fa-times").hide();//new
         }
     });
 

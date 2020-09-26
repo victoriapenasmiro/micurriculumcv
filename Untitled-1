@@ -1,0 +1,4 @@
+<i class="fas fa-times"></i>
+
+           $("button .navbar-toggler-icon").remove();
+            $(".navbar-toggler").append("<i class=\"fas fa-times\"></i>");
