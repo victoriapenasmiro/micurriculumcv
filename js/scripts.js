@@ -34,13 +34,9 @@
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
         $(".navbar-brand span").last().addClass("d-none");
-        $(".navbar-toggler-icon").show();//new
-        $(".fa-times").hide();//new
+        $(".navbar-toggler-icon").show();
+        $(".fa-times").hide();
     });
-
-    /*
-    “wrapInner()”, este comando se encarga de envolver el contenido, para incluirlo como nodos de texto.
-    */
 
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
@@ -51,11 +47,14 @@
         if($("#profile").hasClass("d-none")){
             $(".navbar-brand span").removeClass("d-none");
             $(".img-fluid").width("50%");
-            $(".navbar-toggler-icon").hide();//new
-            $(".fa-times").show();//new
+            $(".navbar-toggler-icon").hide();
+            $(".fa-times").show();
+            $(".navbar-toggler").css("width","100%")
         }else{
             $(".navbar-brand span").last().addClass("d-none");
-            $(".fa-times").hide();//new
+            $(".fa-times").hide();
+            $(".navbar-toggler").css("width","")
+            $(".navbar-toggler-icon").show();
         }
     });
 
