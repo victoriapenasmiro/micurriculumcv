@@ -35,8 +35,7 @@
         $(".navbar-collapse").collapse("hide");
         $(".navbar-brand span").last().addClass("d-none");
         $(".navbar-toggler-icon").show();
-        $(".fa-times").hide();
-    });
+        $(".fa-times").hide(); });
 
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
